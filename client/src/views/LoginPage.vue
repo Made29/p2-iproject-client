@@ -70,7 +70,6 @@ export default {
         },
 
         async loginSection() {
-            console.log("masuk dong anjim ");
             try {
                 const data = await this.login({
                     email: this.email,

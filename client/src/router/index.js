@@ -3,6 +3,7 @@ import HomePage from "@/views/HomePage.vue"
 import LoginPage from "@/views/LoginPage.vue"
 import RegisterPage from "@/views/RegisterPage.vue"
 import StockPage from "@/views/StockPage.vue" 
+import Favstock from "@/views/Favstock.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       name: "stock",
       component: StockPage,
     },
+    {
+      path: "/watchlist",
+      name: "watchlist",
+      component: Favstock,
+    },
   ],
 });
 
@@ -35,6 +41,7 @@ router.beforeEach((to, from, next) => {
   if (to.name === 'register' && localStorage.getItem("access_token")) next({ name: 'home' })
   else if (to.name === 'home' && !localStorage.getItem("access_token")) next({ name: 'login' })
   else if (to.name === 'stock' && !localStorage.getItem("access_token")) next({ name: 'login' })
+  else if (to.name === 'watchlist' && !localStorage.getItem("access_token")) next({ name: 'login' })
   else next()
 })
 

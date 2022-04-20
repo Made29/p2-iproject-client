@@ -1,5 +1,5 @@
 <template>
-   <div class="bg-cover" style="background-image: url(https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+   <div class="bg-cover" style="background-image: url(https://media.istockphoto.com/videos/double-exposure-of-graph-and-rows-of-money-coins-video-id1044323966?s=640x640);">
 
        <Navbar/>
    
