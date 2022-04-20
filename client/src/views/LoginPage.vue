@@ -76,11 +76,15 @@ export default {
                     password: this.password,
                 });
                 localStorage.setItem("access_token", data.data.access_token);
-                this.$router.push("/")
+                this.$router.push("/");
+                this.$toast.success("Wellcome to Stock View", {
+                    position: "top-right",
+                    duration: 1500,
+                });
             } catch (error) {
-                console.log(error);
+                this.$toast.error(error.response.data.message);
             }
-        }
+        },
     },
 };
 </script>
