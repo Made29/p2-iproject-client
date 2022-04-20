@@ -43,10 +43,10 @@
             </div>
             <div class="flex items-center p-5">
                 <button
-                    v-on:click.prevent="topUp"
+                    v-on:click.prevent="topUpButton"
                     class="w-20 py-3 hover:bg-slate-500 rounded-xl duration-500"
                 >
-                    Top Up
+                    Credit
                 </button>
             </div>
         </div>
@@ -66,8 +66,12 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "pinia"
+import { useStockStore } from "@/stores/stock.js"
+
 export default {
     methods: {
+        ...mapActions(useStockStore, ["topUp"]),
         stockList() {
             this.$router.push("/stock");
         },
@@ -76,8 +80,8 @@ export default {
             this.$router.push("/watchlist")
         },
 
-        topUp() {
-            console.log("masuk bang topup");
+        topUpButton() {
+            this.topUp()
         },
 
         home() {

@@ -67,6 +67,21 @@ export const useStockStore = defineStore({
           }catch(error){
             console.log(error)
           }
+        },
+
+        async topUp(){
+          try{
+            const data = await axios({
+              method: "POST",
+              url: `${baseURL}/xendit`,
+              headers: {
+                access_token: localStorage.getItem("access_token")
+              }
+            })
+            window.location = data.data.invoice_url
+          }catch(error){
+            console.log(error)
+          }
         }
     },
 });
