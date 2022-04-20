@@ -93,7 +93,6 @@ export default {
                     duration: 1500,
                 });
             } catch (error) {
-                console.log(error);
                 this.$toast.error("Input can not empty", {
                     position: "top-right",
                     duration: 1500,
