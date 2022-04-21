@@ -1,5 +1,5 @@
 <template>
-    <tbody class="text-center hover:bg-gray-400 duration-200">
+    <tbody class="text-center hover:bg-gray-400 duration-200 cursor-pointer">
         <tr>
             <th>{{ index + 1 }}</th>
             <td>{{ value.Code }}</td>
@@ -43,7 +43,7 @@ export default {
         ...mapActions(useStockStore, ["favoriteStock"]),
         favStock(value){
             this.favoriteStock(value)
-        }
+        },
     }
 };
 </script>

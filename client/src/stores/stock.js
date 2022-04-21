@@ -72,11 +72,11 @@ export const useStockStore = defineStore({
             }
         },
 
-        async topUp() {
+        async buyStock(id) {
             try {
                 const data = await axios({
                     method: "POST",
-                    url: `${baseURL}/xendit`,
+                    url: `${baseURL}/xendit/${id}`,
                     headers: {
                         access_token: localStorage.getItem("access_token"),
                     },

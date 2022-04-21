@@ -41,14 +41,6 @@
                     Watch List
                 </button>
             </div>
-            <div class="flex items-center p-5">
-                <button
-                    v-on:click.prevent="topUpButton"
-                    class="w-20 py-3 hover:bg-slate-500 rounded-xl duration-500"
-                >
-                    Credit
-                </button>
-            </div>
         </div>
 
         <!-- atas kiri -->
@@ -83,14 +75,6 @@ export default {
         stockWatchlist() {
             this.$router.push("/watchlist");
             this.$toast.success("Watchlist", {
-                position: "top-right",
-                duration: 1500,
-            });
-        },
-
-        topUpButton() {
-            this.topUp();
-            this.$toast.success("Top Up", {
                 position: "top-right",
                 duration: 1500,
             });

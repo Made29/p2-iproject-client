@@ -5,6 +5,7 @@
    
        <!-- body -->
        <div class="overflow-x-auto">
+         <h6 class="text-gray-700">Click table to buy</h6>
         <table class="table table-compact w-full">
           <thead>
             <tr>
@@ -17,12 +18,13 @@
               <th>Favorite</th>
             </tr>
           </thead>
-
+          
           <Table
           v-for="(value, i) in stockList"
-          v-bind:key="value.id"
+          v-bind:key="value.Id"
           v-bind:value="value"
           v-bind:index="i"
+          v-on:click.prevent="buy(value.Id)"
           />
 
           <tfoot>
@@ -55,7 +57,10 @@ export default {
     },
 
     methods: {
-        ...mapActions(useStockStore, ["fetchStock"])
+        ...mapActions(useStockStore, ["fetchStock", "stockDetail", "buyStock"]),
+        buy(id){
+          this.buyStock(id)
+        }
     },
 
     computed: {
