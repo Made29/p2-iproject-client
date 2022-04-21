@@ -47,7 +47,7 @@
                         <button
                             class="rounded-full p-2 px-28 background-image:h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:outline outline-offset-0 outline-blue-500 outline-1"
                         >
-                            Sign In
+                            Sign Up
                         </button>
                     </div>
                     <hr />
