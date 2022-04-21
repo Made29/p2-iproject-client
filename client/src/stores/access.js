@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import axios from "axios"
-const baseURL = "http://localhost:3000"
+const baseURL = "https://stock-view.herokuapp.com/"
 
 export const useAccessStore = defineStore({
   id: "counter",

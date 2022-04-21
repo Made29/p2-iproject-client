@@ -82,7 +82,7 @@ export default {
                     duration: 1500,
                 });
             } catch (error) {
-                this.$toast.error(error.response.data.message);
+                this.$toast.error(error);
             }
         },
     },
